@@ -299,7 +299,7 @@ class StatusResourceBuild(HtmlResource):
 
             cxt['steps'].append(step)
 
-            trigger_links = yield s.prepare_trigger_links(sourcestamps)
+            trigger_links = yield s.prepare_trigger_links(codebases_arg)
             for link_data in trigger_links:
                 s.addURL(*link_data)
 
